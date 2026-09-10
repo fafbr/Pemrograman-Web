@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-MINI | Beranda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f6f8] text-[#2b2b2b] font-sans leading-relaxed min-h-screen flex flex-col justify-between">
+    <header class="bg-[#236c4b] text-white p-4 sm:px-6 flex items-center justify-between flex-wrap shadow-sm">
+        <h1 class="text-xl font-bold">SIMPUS-MINI</h1>
+
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <label for="menu-toggle" class="md:hidden block cursor-pointer p-1 text-white border border-emerald-600 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </label>
+
+        <nav class="hidden peer-checked:block w-full md:block md:w-auto mt-3 md:mt-0">
+            <ul class="flex flex-col md:flex-row gap-2 md:gap-5 font-medium text-sm">
+                <li><a href="index.html" class="text-white hover:underline block py-1 font-bold">Beranda</a></li>
+                <li><a href="buku/list.html" class="text-white hover:underline block py-1">Daftar Buku</a></li>
+                <li><a href="buku/tambah.html" class="text-white hover:underline block py-1">Tambah Buku</a></li>
+                <li><a href="anggota/list.html" class="text-white hover:underline block py-1">Daftar Anggota</a></li>
+                <li><a href="anggota/tambah.html" class="text-white hover:underline block py-1">Tambah Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto my-8 px-4 sm:px-6 w-full flex-1">
+        <section class="bg-white rounded-lg p-6 mb-6 shadow-sm">
+            <h2 class="text-xl font-bold text-[#236c4b] mb-2">Selamat Datang di Sistem Perpustakaan Mini</h2>
+            <p class="text-gray-600">Aplikasi Sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
+        </section>
+
+        <section class="bg-white rounded-lg p-6 shadow-sm">
+            <h2 class="text-xl font-bold text-[#236c4b] mb-4 w-full">Ringkasan</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
+                <article class="bg-[#edf7f2] rounded-lg p-5 text-center">
+                    <h3 class="text-sm font-medium text-[#55677a] mb-1">Total Buku</h3>
+                    <p class="text-3xl font-bold text-[#236c4b]">12</p>
+                </article>
+                <article class="bg-[#edf7f2] rounded-lg p-5 text-center">
+                    <h3 class="text-sm font-medium text-[#55677a] mb-1">Total Anggota</h3>
+                    <p class="text-3xl font-bold text-[#236c4b]">8</p>
+                </article>
+                <article class="bg-[#edf7f2] rounded-lg p-5 text-center">
+                    <h3 class="text-sm font-medium text-[#55677a] mb-1">Sedang Dipinjam</h3>
+                    <p class="text-3xl font-bold text-[#236c4b]">3</p>
+                </article>
+                <article class="bg-[#edf7f2] rounded-lg p-5 text-center">
+                    <h3 class="text-sm font-medium text-[#55677a] mb-1">Buku Terlambat</h3>
+                    <p class="text-3xl font-bold text-[#236c4b]">3</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-5 text-[#7a8794] text-sm">
+        <p>&copy; 2026 SIMPUS-MINI &mdash; jobsheet 3</p>
+    </footer>
+</body>
+</html>

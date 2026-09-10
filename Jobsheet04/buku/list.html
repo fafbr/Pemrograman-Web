@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-MINI | Daftar Buku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f6f8] text-[#2b2b2b] font-sans leading-relaxed min-h-screen flex flex-col justify-between">
+    <header class="bg-[#236c4b] text-white p-4 sm:px-6 flex items-center justify-between flex-wrap shadow-sm">
+        <h1 class="text-xl font-bold">SIMPUS-MINI</h1>
+
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <label for="menu-toggle" class="md:hidden block cursor-pointer p-1 text-white border border-emerald-600 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </label>
+
+        <nav class="hidden peer-checked:block w-full md:block md:w-auto mt-3 md:mt-0">
+            <ul class="flex flex-col md:flex-row gap-2 md:gap-5 font-medium text-sm">
+                <li><a href="../index.html" class="text-white hover:underline block py-1">Beranda</a></li>
+                <li><a href="list.html" class="text-white hover:underline block py-1 font-bold">Daftar Buku</a></li>
+                <li><a href="tambah.html" class="text-white hover:underline block py-1">Tambah Buku</a></li>
+                <li><a href="../anggota/list.html" class="text-white hover:underline block py-1">Daftar Anggota</a></li>
+                <li><a href="../anggota/tambah.html" class="text-white hover:underline block py-1">Tambah Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto my-8 px-4 sm:px-6 w-full flex-1">
+        <section class="bg-white rounded-lg p-6 shadow-sm">
+            <h2 class="text-xl font-bold text-[#236c4b] mb-4">Daftar Buku</h2>
+            
+            <!-- Wrapper Responsif untuk Tabel -->
+            <div class="overflow-x-auto w-full border border-[#e2e6ea] rounded">
+                <table class="w-full border-collapse text-left text-sm">
+                    <thead class="bg-[#236c4b] text-white">
+                        <tr>
+                            <th class="p-3 border-b border-[#e2e6ea] whitespace-nowrap">Judul</th>
+                            <th class="p-3 border-b border-[#e2e6ea] whitespace-nowrap">Pengarang</th>
+                            <th class="p-3 border-b border-[#e2e6ea] whitespace-nowrap">Tahun</th>
+                            <th class="p-3 border-b border-[#e2e6ea] whitespace-nowrap">Stok</th>
+                            <th class="p-3 border-b border-[#e2e6ea] whitespace-nowrap">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-[#e2e6ea]">
+                        <tr class="hover:bg-[#edf7f2] transition-colors">
+                            <td class="p-3 whitespace-nowrap">Laskar Pelangi</td>
+                            <td class="p-3 whitespace-nowrap">Andrea Hirata</td>
+                            <td class="p-3 whitespace-nowrap">2005</td>
+                            <td class="p-3 whitespace-nowrap">4</td>
+                            <td class="p-3 whitespace-nowrap space-x-1">
+                                <button type="button" class="bg-[#f0ad4e] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Edit</button>
+                                <button type="button" class="bg-[#5bc0de] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Detail</button>
+                                <button type="button" class="bg-[#d9534f] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-[#f7f9fb] hover:bg-[#edf7f2] transition-colors">
+                            <td class="p-3 whitespace-nowrap">Bumi Manusia</td>
+                            <td class="p-3 whitespace-nowrap">Pramoedya Ananta Toer</td>
+                            <td class="p-3 whitespace-nowrap">1980</td>
+                            <td class="p-3 whitespace-nowrap">2</td>
+                            <td class="p-3 whitespace-nowrap space-x-1">
+                                <button type="button" class="bg-[#f0ad4e] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Edit</button>
+                                <button type="button" class="bg-[#5bc0de] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Detail</button>
+                                <button type="button" class="bg-[#d9534f] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-[#edf7f2] transition-colors">
+                            <td class="p-3 whitespace-nowrap">Negeri 5 Menara</td>
+                            <td class="p-3 whitespace-nowrap">Ahmad Fuadi</td>
+                            <td class="p-3 whitespace-nowrap">2009</td>
+                            <td class="p-3 whitespace-nowrap">0</td>
+                            <td class="p-3 whitespace-nowrap space-x-1">
+                                <button type="button" class="bg-[#f0ad4e] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Edit</button>
+                                <button type="button" class="bg-[#5bc0de] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Detail</button>
+                                <button type="button" class="bg-[#d9534f] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-[#f7f9fb] hover:bg-[#edf7f2] transition-colors">
+                            <td class="p-3 whitespace-nowrap">Filosofi Teras</td>
+                            <td class="p-3 whitespace-nowrap">Henry Manmpiring</td>
+                            <td class="p-3 whitespace-nowrap">2018</td>
+                            <td class="p-3 whitespace-nowrap">5</td>
+                            <td class="p-3 whitespace-nowrap space-x-1">
+                                <button type="button" class="bg-[#f0ad4e] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Edit</button>
+                                <button type="button" class="bg-[#5bc0de] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Detail</button>
+                                <button type="button" class="bg-[#d9534f] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-[#edf7f2] transition-colors">
+                            <td class="p-3 whitespace-nowrap">Ronggeng Dukuh Paruk</td>
+                            <td class="p-3 whitespace-nowrap">Ahmad Tonari</td>
+                            <td class="p-3 whitespace-nowrap">1982</td>
+                            <td class="p-3 whitespace-nowrap">1</td>
+                            <td class="p-3 whitespace-nowrap space-x-1">
+                                <button type="button" class="bg-[#f0ad4e] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Edit</button>
+                                <button type="button" class="bg-[#5bc0de] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Detail</button>
+                                <button type="button" class="bg-[#d9534f] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-[#f7f9fb] hover:bg-[#edf7f2] transition-colors">
+                            <td class="p-3 whitespace-nowrap">Harry Potter and the Philosopher's Stone</td>
+                            <td class="p-3 whitespace-nowrap">J.K. Rowling</td>
+                            <td class="p-3 whitespace-nowrap">1997</td>
+                            <td class="p-3 whitespace-nowrap">3</td>
+                            <td class="p-3 whitespace-nowrap space-x-1">
+                                <button type="button" class="bg-[#f0ad4e] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Edit</button>
+                                <button type="button" class="bg-[#5bc0de] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Detail</button>
+                                <button type="button" class="bg-[#d9534f] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-[#edf7f2] transition-colors">
+                            <td class="p-3 whitespace-nowrap">Notes from Underground</td>
+                            <td class="p-3 whitespace-nowrap">Fyodor Dostoyevsky</td>
+                            <td class="p-3 whitespace-nowrap">1864</td>
+                            <td class="p-3 whitespace-nowrap">0</td>
+                            <td class="p-3 whitespace-nowrap space-x-1">
+                                <button type="button" class="bg-[#f0ad4e] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Edit</button>
+                                <button type="button" class="bg-[#5bc0de] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Detail</button>
+                                <button type="button" class="bg-[#d9534f] hover:opacity-90 text-white text-xs px-2.5 py-1.5 rounded">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-5 text-[#7a8794] text-sm">
+        <p>&copy; 2026 SIMPUS-MINI &mdash; jobsheet 3</p>
+    </footer>
+</body>
+</html>

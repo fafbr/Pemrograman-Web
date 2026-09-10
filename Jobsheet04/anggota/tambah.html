@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-MINI | Tambah Anggota</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f6f8] text-[#2b2b2b] font-sans leading-relaxed min-h-screen flex flex-col justify-between">
+    <header class="bg-[#236c4b] text-white p-4 sm:px-6 flex items-center justify-between flex-wrap shadow-sm">
+        <h1 class="text-xl font-bold">SIMPUS-MINI</h1>
+
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <label for="menu-toggle" class="md:hidden block cursor-pointer p-1 text-white border border-emerald-600 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </label>
+
+        <nav class="hidden peer-checked:block w-full md:block md:w-auto mt-3 md:mt-0">
+            <ul class="flex flex-col md:flex-row gap-2 md:gap-5 font-medium text-sm">
+                <li><a href="../index.html" class="text-white hover:underline block py-1">Beranda</a></li>
+                <li><a href="../buku/list.html" class="text-white hover:underline block py-1">Daftar Buku</a></li>
+                <li><a href="../buku/tambah.html" class="text-white hover:underline block py-1">Tambah Buku</a></li>
+                <li><a href="list.html" class="text-white hover:underline block py-1">Daftar Anggota</a></li>
+                <li><a href="tambah.html" class="text-white hover:underline block py-1 font-bold">Tambah Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto my-8 px-4 sm:px-6 w-full flex-1">
+        <section class="bg-white rounded-lg p-6 shadow-sm">
+            <h2 class="text-xl font-bold text-[#236c4b] mb-4">Tambah Anggota</h2>
+            <form>
+                <p class="mb-4">
+                    <label for="nama" class="block font-semibold text-[#444] mb-1">Nama</label>
+                    <input type="text" id="nama" name="nama" placeholder="isi disini" required
+                            class="w-full max-w-[400px] p-2 border border-[#cdd4da] rounded text-base">
+                </p>
+                <p class="mb-4">
+                    <label for="no_anggota" class="block font-semibold text-[#444] mb-1">No. Anggota</label>
+                    <input type="text" id="no_anggota" name="no_anggota" placeholder="isi disini" required
+                            class="w-full max-w-[400px] p-2 border border-[#cdd4da] rounded text-base">
+                </p>
+                <p class="mb-4">
+                    <label for="alamat" class="block font-semibold text-[#444] mb-1">Alamat</label>
+                    <input type="text" id="alamat" name="alamat" placeholder="isi disini"
+                            class="w-full max-w-[400px] p-2 border border-[#cdd4da] rounded text-base">
+                </p>
+                <p class="mb-4">
+                    <label for="no_hp" class="block font-semibold text-[#444] mb-1">No. HP</label>
+                    <input type="text" id="no_hp" name="no_hp" placeholder="isi disini"
+                            class="w-full max-w-[400px] p-2 border border-[#cdd4da] rounded text-base">
+                </p>
+                <p class="mb-4">
+                    <label for="email" class="block font-semibold text-[#444] mb-1">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@xxxx.com" required
+                            class="w-full max-w-[400px] p-2 border border-[#cdd4da] rounded text-base">
+                </p>
+                <p class="mt-6">
+                    <button type="submit" class="bg-[#236c4b] hover:bg-[#1b5239] text-white py-2.5 px-6 rounded text-base cursor-pointer">
+                        Simpan
+                    </button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="text-center py-5 text-[#7a8794] text-sm">
+        <p>&copy; 2026 SIMPUS-MINI &mdash; jobsheet 3</p>
+    </footer>
+</body>
+</html>

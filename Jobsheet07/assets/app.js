@@ -3,11 +3,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const forms = document.querySelectorAll("form");
     forms.forEach((form) => {
         form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            alert("Data berhasil disimpan! (Simulasi Jobsheet 06)");
-            window.location.href = form.getAttribute("data-redirect") || "list.html";
+            // Hilangkan e.preventDefault() jika form langsung melakukan submit POST via PHP
+            if (form.hasAttribute("data-redirect")) {
+                e.preventDefault();
+                alert("Data berhasil disimpan!");
+                window.location.href = form.getAttribute("data-redirect");
+            }
         });
     });
+
+    // Global Mobile Menu Toggle Logic (Smooth Transition)
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    const iconOpen = document.getElementById("menu-icon-open");
+    const iconClose = document.getElementById("menu-icon-close");
+
+    if (btn && menu) {
+        btn.addEventListener("click", () => {
+            const isOpen = menu.style.maxHeight && menu.style.maxHeight !== "0px";
+
+            if (isOpen) {
+                menu.style.maxHeight = "0px";
+                iconOpen.classList.remove("hidden");
+                iconOpen.classList.add("block");
+                iconClose.classList.remove("block");
+                iconClose.classList.add("hidden");
+            } else {
+                menu.style.maxHeight = menu.scrollHeight + "px";
+                iconOpen.classList.remove("block");
+                iconOpen.classList.add("hidden");
+                iconClose.classList.remove("hidden");
+                iconClose.classList.add("block");
+            }
+        });
+    }
 });
 
 // Global Function untuk Delete Row dari DOM

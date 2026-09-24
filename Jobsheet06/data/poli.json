@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nama": "Poli Umum",
+    "lokasi": "Lantai 1 - Gedung A"
+  },
+  {
+    "id": 2,
+    "nama": "Poli Gigi",
+    "lokasi": "Lantai 1 - Gedung B"
+  },
+  {
+    "id": 3,
+    "nama": "Poli Mata",
+    "lokasi": "Lantai 2 - Gedung A"
+  },
+  {
+    "id": 4,
+    "nama": "Poli Anak",
+    "lokasi": "Lantai 2 - Gedung B"
+  }
+]

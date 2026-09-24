@@ -1,0 +1,34 @@
+[
+  {
+    "id": 101,
+    "nama": "dr. Andi Wijaya",
+    "idPoli": 1,
+    "namaPoli": "Poli Umum",
+    "sip": "SIP-2024-001",
+    "jadwal": "Senin - Rabu"
+  },
+  {
+    "id": 102,
+    "nama": "drg. Siti Rahma",
+    "idPoli": 2,
+    "namaPoli": "Poli Gigi",
+    "sip": "SIP-2024-002",
+    "jadwal": "Kamis - Sabtu"
+  },
+  {
+    "id": 103,
+    "nama": "dr. Budi Santoso",
+    "idPoli": 1,
+    "namaPoli": "Poli Umum",
+    "sip": "SIP-2024-003",
+    "jadwal": "Selasa - Jumat"
+  },
+  {
+    "id": 104,
+    "nama": "dr. Maya Putri, Sp.M",
+    "idPoli": 3,
+    "namaPoli": "Poli Mata",
+    "sip": "SIP-2024-004",
+    "jadwal": "Senin & Kamis"
+  }
+]

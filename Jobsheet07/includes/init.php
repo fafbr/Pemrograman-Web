@@ -43,8 +43,13 @@ function search_array($data, $keyword, $fields = []) {
 }
 
 function auth_protect() {
-    $current_page = basename($_SERVER['PHP_SELF']);
-    if ($current_page !== 'login.php' && !isset($_SESSION['user_logged_in'])) {
+    // Ambil path asli dari URL browser (bukan skrip entry point serverless)
+    $request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    
+    // Izinkan akses tanpa login khusus untuk endpoint login.php
+    $is_login_page = ($request_uri === '/login.php');
+
+    if (!$is_login_page && !isset($_SESSION['user_logged_in'])) {
         header('Location: ' . base_url('login.php'));
         exit;
     }

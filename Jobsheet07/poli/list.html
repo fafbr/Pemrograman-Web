@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Poliklinik - POLIMEDIC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow-md shadow-indigo-200">P</div>
+                <div>
+                    <span class="font-bold text-slate-900 text-lg leading-tight block">POLIMEDIC</span>
+                    <span class="text-xs text-slate-500 font-medium">Poliklinik Management</span>
+                </div>
+            </a>
+            <nav class="flex items-center space-x-1">
+                <a href="../index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Dashboard</a>
+                <a href="list.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-indigo-600 bg-indigo-50">Data Poli</a>
+                <a href="../dokter/list.html" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Data Dokter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-900">Daftar Unit Poliklinik</h1>
+                <p class="text-slate-500 text-sm mt-0.5">Kelola informasi lokasi dan ruang pelayanan medis.</p>
+            </div>
+            <a href="tambah.html" class="inline-flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-indigo-700 transition shadow-sm shadow-indigo-200">
+                <span>+</span> Tambah Poli
+            </a>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="mb-4">
+            <input type="text" id="search-poli" placeholder="Cari nama poli atau lokasi..." class="w-full sm:w-80 px-4 py-2 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm placeholder:text-slate-400 card-shadow">
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 card-shadow overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 text-slate-500 text-xs font-semibold uppercase tracking-wider border-b border-slate-200">
+                            <th class="py-4 px-6">ID</th>
+                            <th class="py-4 px-6">Nama Poliklinik</th>
+                            <th class="py-4 px-6">Lokasi Ruangan</th>
+                            <th class="py-4 px-6 text-right">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-poli" class="divide-y divide-slate-100 text-sm">
+                        <!-- Rendered by app.js via JSON -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/app.js"></script>
+    <script src="../assets/poli.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPOLIMEDIC - Modern Poliklinik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+    <!-- Navbar Top -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow-md shadow-indigo-200">
+                    S
+                </div>
+                <div>
+                    <span class="font-bold text-slate-900 text-lg leading-tight block">POLIMEDIC</span>
+                    <span class="text-xs text-slate-500 font-medium">Poliklinik Management</span>
+                </div>
+            </a>
+            <nav class="flex items-center space-x-1">
+                <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-indigo-600 bg-indigo-50">Dashboard</a>
+                <a href="poli/list.html" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Data Poli</a>
+                <a href="dokter/list.html" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Data Dokter</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+        <div class="mb-8">
+            <h1 class="text-2xl font-bold text-slate-900">Dashboard Sistem Informasi</h1>
+            <p class="text-slate-500 text-sm mt-1">Ringkasan unit layanan kesehatan dan manajemen dokter aktif.</p>
+        </div>
+
+        <!-- Quick Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 card-shadow flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Poliklinik</p>
+                    <h3 class="text-3xl font-bold text-slate-900 mt-1">3 <span class="text-sm font-normal text-slate-500">Unit</span></h3>
+                </div>
+                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center font-semibold">
+                    🏥
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 card-shadow flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Dokter Terdaftar</p>
+                    <h3 class="text-3xl font-bold text-slate-900 mt-1">3 <span class="text-sm font-normal text-slate-500">Orang</span></h3>
+                </div>
+                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center font-semibold">
+                    👨‍⚕️
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card Poli -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 card-shadow hover:border-indigo-300 transition duration-200">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 font-semibold text-xs rounded-full mb-3">Master Entity</span>
+                        <h2 class="text-xl font-bold text-slate-900">Data Poliklinik</h2>
+                        <p class="text-slate-500 text-sm mt-2 leading-relaxed">Kelola daftar ruangan, unit kesehatan, dan deskripsi lokasi poli.</p>
+                    </div>
+                </div>
+                <div class="mt-8 pt-4 border-t border-slate-100 flex gap-3">
+                    <a href="poli/list.html" class="flex-1 text-center bg-indigo-600 text-white py-2.5 rounded-xl text-sm font-semibold hover:bg-indigo-700 transition shadow-sm shadow-indigo-200">Kelola Poli</a>
+                    <a href="poli/tambah.html" class="px-4 py-2.5 bg-slate-100 text-slate-700 rounded-xl text-sm font-semibold hover:bg-slate-200 transition">+ Baru</a>
+                </div>
+            </div>
+
+            <!-- Card Dokter -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 card-shadow hover:border-emerald-300 transition duration-200">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 font-semibold text-xs rounded-full mb-3">Detail Entity</span>
+                        <h2 class="text-xl font-bold text-slate-900">Data Dokter & Spesialis</h2>
+                        <p class="text-slate-500 text-sm mt-2 leading-relaxed">Kelola biodata dokter, nomor izin praktik (SIP), dan penugasan poli.</p>
+                    </div>
+                </div>
+                <div class="mt-8 pt-4 border-t border-slate-100 flex gap-3">
+                    <a href="dokter/list.html" class="flex-1 text-center bg-emerald-600 text-white py-2.5 rounded-xl text-sm font-semibold hover:bg-emerald-700 transition shadow-sm shadow-emerald-200">Kelola Dokter</a>
+                    <a href="dokter/tambah.html" class="px-4 py-2.5 bg-slate-100 text-slate-700 rounded-xl text-sm font-semibold hover:bg-slate-200 transition">+ Baru</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+-- Jobsheet 8: skema awal database simpus_mini (PostgreSQL)
+-- Jalankan setelah membuat database, misal:
+--   createdb simpus_mini
+--   psql -d simpus_mini -f sql/01_buku_anggota.sql

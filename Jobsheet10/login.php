@@ -17,8 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute(['username' => $username]);
         $user = $stmt->fetch();
 
-        // Verifikasi password BCrypt
-        if ($user && password_verify($password, $user['password'])) {
+        if (!$user) {
+            $error = 'Akun tidak ditemukan!';
+        } elseif (password_verify($password, $user['password'])) {
             $_SESSION['user_logged_in'] = true;
             $_SESSION['user_id']        = $user['id'];
             $_SESSION['username']       = $user['username'];
@@ -28,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: ' . base_url('index.php'));
             exit;
         } else {
-            $error = 'Username atau password salah!';
+            $error = 'Password salah!';
         }
     } else {
         $error = 'Harap isi username dan password!';
